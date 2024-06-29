@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.tooling.preview.Preview
+import com.jordev.focustimer.R
 import com.jordev.focustimer.ui.theme.FocusTimerTheme
 
 @Composable
@@ -34,4 +36,15 @@ fun BorderedIcon(
         contentDescription = "Icono",
         tint = MaterialTheme.colorScheme.primary
     )
+}
+
+@Preview(
+    name = "BorderedIconPreview",
+    showBackground = true
+)
+@Composable
+fun BorderedIconPreview(){
+    FocusTimerTheme{
+        BorderedIcon(icon = R.drawable.ic_menu)
+    }
 }
